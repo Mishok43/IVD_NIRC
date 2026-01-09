@@ -1,0 +1,2 @@
+[WarpWatch]
+Expressions=level, attenuations[level], atten_factor, trainEpoch, "attenuations[level + 1];"

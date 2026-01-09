@@ -1,0 +1,25 @@
+{
+    "numLODs": 0,
+    "lodSize": [ 1 ],
+    "gradient_denoising": {
+        "enable": false, 
+        "hash_grid_res": 64,
+        "hash_grid_size": 4096,
+        "level": 10.0,
+        "max_iter": 1000,
+        "weighting":{
+            "distance": true,
+            "distance_sd": 0.75,
+            "normal": false,
+            "normal_power": 1,
+            "normal_min": 0.25,
+            "luminance": false,
+            "luminance_sd": 1.0,
+            "luminance_min": 0.25
+        },
+        "gradients_blending": 0.2
+    },
+    "auto_start": true,
+    "number_gradient_steps": 4,
+    "max_steps":  2000
+}

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="DummyNeuralNetworkCV.h" />
+    <CudaCompile Include="DummyNeuralNetworkCV.cpp" />
+    <CudaCompile Include="NNLaplacianCV.cpp" />
+    <CudaCompile Include="NNLaplacianCV.h" />
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\common.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\common_device.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\cutlass_mlp.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\cutlass_resnet.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\fully_fused_mlp.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\encoding.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\loss.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\network.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\object.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\optimizer.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\reduce_sum.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderSource Include="buffToTexCV.cs.slang" />
+    <ShaderSource Include="assemblerCV.cs.slang" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="tiny-cuda-nn">
+      <UniqueIdentifier>{03c02a8a-7aa5-426e-91c9-a6699449bd82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\tiny-cuda-nn\src\cnpy.cpp">
+      <Filter>tiny-cuda-nn</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

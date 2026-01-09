@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="DummyNeuralNetwork.h" />
+    <CudaCompile Include="DummyNeuralNetwork.cpp" />
+    <CudaCompile Include="NNLaplacian.cpp" />
+    <CudaCompile Include="NNLaplacian.h" />
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\common.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\common_device.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\fully_fused_mlp.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\encoding.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\loss.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\network.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\object.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\optimizer.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\..\..\..\tiny-cuda-nn\src\reduce_sum.cu">
+      <Filter>tiny-cuda-nn</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderSource Include="buffToTex.cs.slang" />
+    <ShaderSource Include="assembler.cs.slang" />
+    <ShaderSource Include="buffToTexDynamic.cs.slang" />
+    <ShaderSource Include="buffToTexDynamicReal.cs.slang" />
+    <ShaderSource Include="buffToTexDynamicRealFused.cs.slang" />
+    <ShaderSource Include="combine.cs.slang" />
+    <ShaderSource Include="envMapRequest.cs.slang" />
+    <ShaderSource Include="gatherOurEstimations.cs.slang" />
+    <ShaderSource Include="OldPath.slang" />
+    <ShaderSource Include="PathTracer.rt.slang" />
+    <ShaderSource Include="PathTracer.slang" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="tiny-cuda-nn">
+      <UniqueIdentifier>{03c02a8a-7aa5-426e-91c9-a6699449bd82}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\tiny-cuda-nn\src\cnpy.cpp">
+      <Filter>tiny-cuda-nn</Filter>
+    </ClCompile>
+    <ClCompile Include="BootstrapUtils2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\tiny-cuda-nn\include\tiny-cuda-nn\jitify.hpp" />
+    <ClInclude Include="..\..\..\..\tiny-cuda-nn\include\tiny-cuda-nn\jitify_wrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="network_config_1.json" />
+    <None Include="network_config_1_hash.json" />
+    <None Include="network_config_1_high_freq.json" />
+    <None Include="network_config_lowfreq.json" />
+    <None Include="network_config_nirc.json" />
+    <None Include="network_config_nirc_env_map.json" />
+    <None Include="network_config_nrc.json" />
+    <None Include="network_estimator_config.json" />
+    <None Include="pyramid_config.json" />
+    <None Include="network_config - Copy.json" />
+  </ItemGroup>
+</Project>

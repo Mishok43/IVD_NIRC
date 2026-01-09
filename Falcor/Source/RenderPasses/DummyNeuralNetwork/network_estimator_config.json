@@ -1,0 +1,65 @@
+{
+    "dims": {
+        "input": 10,
+        "output": 3,
+        "output_after_transform": 3
+    },
+    "loss": {
+        "otype": "RelativeL2Luminance",
+        "luminance_weighting": false,
+        "custom_weighting": false,
+        "tonemapped": false,
+        "lum_weight": 1.0,
+        "var_weight": 0.0,
+        "luminance_divider": 0.01
+    },
+    "optimizer": {
+        "otype": "ExponentialDecay",
+        "nested":
+        {
+            "otype": "Adam",
+            "learning_rate": 0.001
+
+        }
+    },
+    "encoding": {
+        "otype": "Composite",
+        "nested": [
+            {
+                "n_dims_to_encode": 2, 
+                "otype": "OneBlob",
+                "n_bins": 4,
+                "packed": true
+            },
+            {
+                "n_dims_to_encode": 3,
+                "otype": "HashGrid",
+                "n_levels": 12
+            },
+            {
+                "n_dims_to_encode": 1, 
+                "otype": "OneBlob",
+                "n_bins": 4
+            },
+            {
+                "n_dims_to_encode": 3, 
+                "otype": "Identity"
+            },
+            {
+                "n_dims_to_encode": 1, 
+                "otype": "SphericalHarmonics",
+                "degree": 3,
+                "packed": true,
+                "move_forward": false
+            }
+            
+        ]
+    },
+    "network": {
+        "otype": "FullyFusedMLP",
+        "n_neurons": 64,
+        "n_hidden_layers": 3,
+        "activation": "ReLU",
+        "output_activation": "None"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "dims": {
+        "input": 3,
+        "output": 27,
+        "output_transform": 17,
+        "output_after_transform": 3
+    },
+    "loss": {
+        "otype": "RelativeSHLuminance",
+        "grad_bands_weights": [1.0, 1.0, 1.0, 1.0]
+    },
+    "optimizer": {
+        "otype": "Ema",
+        "nested": {
+            "otype": "Adam",
+            "learning_rate": 0.001,
+            "beta1": 0.9,
+            "beta2": 0.99,  
+            "l2_reg": 0.00001,
+            "beta3": 0.9,
+            "beta_shampoo": 0.0,
+            "identity": 0.0001,
+            "cg_on_momentum": false,
+            "robenius_normalization": true
+        }
+    },
+    "encoding": {
+        "n_dims_to_encode": 3,
+        "otype": "Grid",
+        "n_levels": 12
+    },
+    "network": {
+        "otype": "FullyFusedMLP",
+        "n_neurons": 64,
+        "n_hidden_layers": 2,
+        "activation": "ReLU",
+        "output_activation": "SH",
+        "fused_output_transform": true,
+        "min_sh": 0,
+        "num_sh": 3
+    }
+}
