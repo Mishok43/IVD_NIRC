@@ -58,8 +58,8 @@ We introduce an efficient **Two-Level Monte Carlo** (subset of Multi-Level Monte
 - CMake 3.18 or later
 
 Validated with:
-- CUDA 11.3.0. CUDA should be in Source/Externals/.packman/
-- OptiX 7.3 SDK. Optix is optional. Compilation of Optix-dependent render passes (Optix Denoiser) can be skipped.
+- CUDA 11.3.0
+- OptiX 7.3 SDK. Optix is optional. Compilation of Optix-dependent render passes (Optix Denoiser) can be skipped. Optix should be in Source/Externals/.packman/
 - D3D12
 - NVAPI - R495
 

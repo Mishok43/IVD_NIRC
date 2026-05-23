@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{08E3FADA-4AAC-442A-9F84-22F95934A914}</ProjectGuid>
     <RootNamespace>CudaInterop</RootNamespace>
-    <CudaToolkitCustomDir>$(SolutionDir)Source\Externals\.packman\cuda</CudaToolkitCustomDir>
+    <CudaToolkitCustomDir>$(CUDA_PATH_V11_3)</CudaToolkitCustomDir>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(SolutionDir)Source\Externals\.packman\cuda\extras\visual_studio_integration\MSBuildExtensions\CUDA 11.8.props" />
+    <Import Project="$(CUDA_PATH_V11_3)\extras\visual_studio_integration\MSBuildExtensions\CUDA 11.3.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />

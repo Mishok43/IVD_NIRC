@@ -41,8 +41,8 @@
 // We avoid including CUDA headers in other files because of conflicts
 // they can apparently create with the vector types that Falcor uses.
 //
-#include ".packman/Cuda/include/cuda.h"
-#include ".packman/Cuda/include/cuda_runtime_api.h"
+#include <cuda.h>
+#include <cuda_runtime_api.h>
 #pragma comment(lib, "cuda")
 #pragma comment(lib, "cudart")
 
