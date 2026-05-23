@@ -822,7 +822,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.3.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugD3D12|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -874,7 +874,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\Externals\.packman\deps\debug\lib;$(ProjectDir)..\Externals\.packman\deps\lib;$(ProjectDir)..\Externals\.packman\nvapi\amd64;$(ProjectDir)..\Externals\.packman\vulkansdk\Lib;$(ProjectDir)..\Externals\.packman\slang\bin\windows-x64\release;$(ProjectDir)..\Externals\.packman\python\libs;$(ProjectDir)..\Externals\.packman\WinPixEventRuntime\bin\x64;$(ProjectDir)..\Externals\.packman\Cuda\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Externals\.packman\deps\debug\lib;$(ProjectDir)..\Externals\.packman\deps\lib;$(ProjectDir)..\Externals\.packman\nvapi\amd64;$(ProjectDir)..\Externals\.packman\vulkansdk\Lib;$(ProjectDir)..\Externals\.packman\slang\bin\windows-x64\release;$(ProjectDir)..\Externals\.packman\python\libs;$(ProjectDir)..\Externals\.packman\WinPixEventRuntime\bin\x64;$(CUDA_PATH_V11_3)\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>WinPixEventRuntime.lib;glfw3dll.lib;slang.lib;Comctl32.lib;Shlwapi.lib;assimp-vc142-mt.lib;mikktspaced.lib;FreeImaged.lib;avcodec.lib;avutil.lib;avformat.lib;swscale.lib;Shcore.lib;DirectXTex.lib;Half-2_5_d.lib;openvdb.lib;libcrypto.lib;lz4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
@@ -971,7 +971,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(ProjectDir)..\Externals\.packman\deps\lib;$(ProjectDir)..\Externals\.packman\nvapi\amd64;$(ProjectDir)..\Externals\.packman\vulkansdk\Lib;$(ProjectDir)..\Externals\.packman\slang\bin\windows-x64\release;$(ProjectDir)..\Externals\.packman\python\libs;$(ProjectDir)..\Externals\.packman\WinPixEventRuntime\bin\x64;$(ProjectDir)..\Externals\.packman\Cuda\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\Externals\.packman\deps\lib;$(ProjectDir)..\Externals\.packman\nvapi\amd64;$(ProjectDir)..\Externals\.packman\vulkansdk\Lib;$(ProjectDir)..\Externals\.packman\slang\bin\windows-x64\release;$(ProjectDir)..\Externals\.packman\python\libs;$(ProjectDir)..\Externals\.packman\WinPixEventRuntime\bin\x64;$(CUDA_PATH_V11_3)\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>WinPixEventRuntime.lib;glfw3dll.lib;slang.lib;Comctl32.lib;Shlwapi.lib;assimp-vc142-mt.lib;mikktspace.lib;FreeImage.lib;avcodec.lib;avutil.lib;avformat.lib;swscale.lib;Shcore.lib;DirectXTex.lib;Half-2_5.lib;openvdb.lib;libcrypto.lib;lz4.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
@@ -1075,7 +1075,7 @@
   </ItemGroup>
   <ImportGroup Label="ExtensionTargets">
     <Import Project="ShaderSource.targets" />
-    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.3.targets" />
   </ImportGroup>
   <PropertyGroup>
     <ShaderSourceSubDir>Shaders</ShaderSourceSubDir>
